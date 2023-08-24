@@ -7,4 +7,5 @@ class Solution:
                 return [i, seen[remaining]]
             else:
                 seen[num] = i
+
         return []
