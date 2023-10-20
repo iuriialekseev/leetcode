@@ -1,6 +1,6 @@
 class Solution:
     def maxAreaOfIsland(self, grid: list[list[int]]) -> int:
-        directions = [(0,1), (1,0), (0,-1), (-1, 0)]
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         rows = len(grid)
         cols = len(grid[0])
 
