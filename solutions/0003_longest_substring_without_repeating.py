@@ -7,12 +7,12 @@ class Solution:
         chars = defaultdict(int)
 
         while right < len(s):
-            r = s[right]
-            chars[r] += 1
+            rc = s[right]
+            chars[rc] += 1
 
-            while chars[r] > 1:
-                l = s[left]
-                chars[l] -= 1
+            while chars[rc] > 1:
+                lc = s[left]
+                chars[lc] -= 1
                 left += 1
 
             length = max(length, right - left + 1)
