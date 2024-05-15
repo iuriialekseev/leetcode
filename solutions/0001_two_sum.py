@@ -1,11 +1,14 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         seen = {}
-        for i, num in enumerate(nums):
-            remaining = target - nums[i]
-            if remaining in seen:
-                return [i, seen[remaining]]
-            else:
-                seen[num] = i
+
+        for i in range(len(nums)):
+            num = nums[i]
+            remainder = target - num
+
+            if remainder in seen:
+                return [seen[remainder], i]
+
+            seen[num] = i
 
         return []

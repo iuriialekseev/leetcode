@@ -6,15 +6,16 @@ class Solution:
         while left < right:
             if not s[left].isalnum():
                 left += 1
-            elif not s[right].isalnum():
+                continue
+
+            if not s[right].isalnum():
                 right -= 1
-            elif s[left].lower() == s[right].lower():
-                left += 1
-                right -= 1
-            else:
+                continue
+
+            if s[left].lower() != s[right].lower():
                 return False
 
-        return True
+            left += 1
+            right -= 1
 
-# s = "A man, a plan, a canal: Panama" => true
-# s = "race a car"
+        return True
